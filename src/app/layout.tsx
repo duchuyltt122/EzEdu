@@ -16,8 +16,8 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "EzEdu - Ứng dụng học tiếng Việt cho trẻ em",
-  description: "Ứng dụng giáo dục tương tác giúp trẻ em học tiếng Việt qua các trò chơi vui nhộn và bài tập thú vị",
+  title: "EzEdu - Ứng dụng phát triển kĩ năng ngôn ngữ qua trò chơi Tiếng Việt",
+  description: "Ứng dụng giáo dục tương tác giúp trẻ em phát triển kĩ năng ngôn ngữ tiếng Việt qua các trò chơi vui nhộn và bài tập thú vị",
   keywords: "học tiếng việt, trẻ em, giáo dục, trò chơi, tương tác",
   authors: [{ name: "EzEdu Team" }],
 };
