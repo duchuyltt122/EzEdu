@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - EzEdu</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/game.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <button class="back-button" onclick="goHome()">← Về trang chủ</button>
+            <h1 class="app-title">Edu</h1>
+        </header>
+
+        <!-- Game Content -->
+        <main class="game-content">
+            <h2 class="game-title"><%= gameData.title %></h2>
+            <p class="game-description"><%= gameData.description %></p>
+            
+            <div id="game-area" class="game-area" data-game="<%= gameId %>">
+                <% if (gameId === 'ghep-chu') { %>
+                    <div class="word-building-game">
+                        <div class="target-word">
+                            <div class="word-slots">
+                                <div class="letter-slot" data-letter="M"></div>
+                                <div class="letter-slot" data-letter="E"></div>
+                                <div class="letter-slot" data-letter="O"></div>
+                            </div>
+                            <p class="word-hint">Động vật kêu "meo meo"</p>
+                        </div>
+                        <div class="letter-bank">
+                            <div class="draggable-letter" draggable="true" data-letter="M">M</div>
+                            <div class="draggable-letter" draggable="true" data-letter="E">E</div>
+                            <div class="draggable-letter" draggable="true" data-letter="O">O</div>
+                            <div class="draggable-letter" draggable="true" data-letter="A">A</div>
+                            <div class="draggable-letter" draggable="true" data-letter="I">I</div>
+                        </div>
+                    </div>
+                <% } else if (gameId === 'xep-gach') { %>
+                    <div class="brick-stacking-game">
+                        <div class="target-area">
+                            <div class="brick-slots">
+                                <div class="brick-slot" data-position="0"></div>
+                                <div class="brick-slot" data-position="1"></div>
+                                <div class="brick-slot" data-position="2"></div>
+                            </div>
+                            <p class="word-hint">Xếp để tạo từ "MẸ"</p>
+                        </div>
+                        <div class="brick-bank">
+                            <div class="brick-piece" draggable="true" data-letter="M" data-order="0">M</div>
+                            <div class="brick-piece" draggable="true" data-letter="Ẹ" data-order="1">Ẹ</div>
+                            <div class="brick-piece" draggable="true" data-letter="A" data-order="2">A</div>
+                        </div>
+                    </div>
+                <% } else if (gameId === 'cau-do') { %>
+                    <div class="quiz-game">
+                        <div class="question-card">
+                            <h3>Câu hỏi 1</h3>
+                            <p class="question">Con vật nào có tiếng kêu "gâu gâu"?</p>
+                            <div class="answer-options">
+                                <button class="answer-btn" data-answer="wrong">Mèo</button>
+                                <button class="answer-btn" data-answer="correct">Chó</button>
+                                <button class="answer-btn" data-answer="wrong">Gà</button>
+                                <button class="answer-btn" data-answer="wrong">Vịt</button>
+                            </div>
+                        </div>
+                        <div class="score">Điểm: <span id="score">0</span></div>
+                    </div>
+                <% } %>
+            </div>
+            
+            <div class="game-controls">
+                <button class="btn btn-primary" onclick="resetGame()">Chơi lại</button>
+                <button class="btn btn-secondary" onclick="nextLevel()">Cấp độ tiếp theo</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/games.js"></script>
+</body>
+</html>
