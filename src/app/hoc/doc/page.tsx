@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function DocPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-400 to-blue-600 p-4">
@@ -6,23 +8,23 @@ export default function DocPage() {
         <div className="bg-yellow-200 rounded-lg p-4">
           <h2 className="text-lg font-semibold mb-4">Trò chơi đọc hiểu:</h2>
           <div className="space-y-3">
-            <a href="/hoc/doc/games/quiz" className="block bg-blue-500 text-white p-3 rounded-lg text-center hover:bg-blue-600">
+            <Link href="/hoc/doc/games/quiz" className="block bg-blue-500 text-white p-3 rounded-lg text-center hover:bg-blue-600">
               🧩 Câu đố
-            </a>
-            <a href="/hoc/doc/games/word-assembly" className="block bg-green-500 text-white p-3 rounded-lg text-center hover:bg-green-600">
+            </Link>
+            <Link href="/hoc/doc/games/word-assembly" className="block bg-green-500 text-white p-3 rounded-lg text-center hover:bg-green-600">
               🔤 Ghép chữ
-            </a>
-            <a href="/hoc/doc/games/block-stacking" className="block bg-orange-500 text-white p-3 rounded-lg text-center hover:bg-orange-600">
+            </Link>
+            <Link href="/hoc/doc/games/block-stacking" className="block bg-orange-500 text-white p-3 rounded-lg text-center hover:bg-orange-600">
               🧱 Xếp gạch
-            </a>
+            </Link>
           </div>
           <div className="mt-4 text-center space-x-2">
-            <a href="/hoc" className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+            <Link href="/hoc" className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
               ← Quay lại
-            </a>
-            <a href="/" className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+            </Link>
+            <Link href="/" className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
               🏠 Trang chủ
-            </a>
+            </Link>
           </div>
         </div>
       </div>

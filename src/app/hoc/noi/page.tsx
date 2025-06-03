@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function NoiPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-400 to-blue-600 p-4">
@@ -8,12 +10,12 @@ export default function NoiPage() {
             Kỹ năng nói đang được phát triển...
           </p>
           <div className="mt-4 text-center space-x-2">
-            <a href="/hoc" className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+            <Link href="/hoc" className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
               ← Quay lại
-            </a>
-            <a href="/" className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+            </Link>
+            <Link href="/" className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
               🏠 Trang chủ
-            </a>
+            </Link>
           </div>
         </div>
       </div>
