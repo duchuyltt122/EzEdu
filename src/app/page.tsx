@@ -41,45 +41,84 @@ export default function Home() {
 
           {/* Progress Section */}
           <div className="bg-yellow-100 mobile-card shadow-lg">
-            <h3 className="text-lg font-bold text-readable vietnamese-text mb-3">BIỂU ĐỒ TIẾN ĐỘ HỌC</h3>
+            <div className="flex items-center gap-2 mb-3">
+              <h3 className="text-lg font-bold text-readable vietnamese-text">TIẾN ĐỘ HỌC HÀNG NGÀY</h3>
+              <div className="flex items-center gap-1">
+                <span className="text-2xl">🔥</span>
+                <span className="text-sm font-bold text-orange-600">7 ngày</span>
+              </div>
+            </div>
 
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm font-medium text-readable vietnamese-text">Đọc</span>
-                  <span className="text-sm font-bold text-blue-600">75%</span>
-                </div>
-                <div className="w-full bg-gray-300 rounded-full h-4">
-                  <div className="bg-blue-600 h-4 rounded-full transition-all duration-500" style={{width: '75%'}}></div>
+            {/* Weekly Calendar */}
+            <div className="mb-4">
+              <div className="grid grid-cols-7 gap-1 mb-2">
+                {['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((day, index) => (
+                  <div key={day} className="text-center text-xs font-medium text-readable-light vietnamese-text">
+                    {day}
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-7 gap-1">
+                {[
+                  { completed: true, streak: true },
+                  { completed: true, streak: true },
+                  { completed: true, streak: true },
+                  { completed: true, streak: true },
+                  { completed: true, streak: true },
+                  { completed: true, streak: true },
+                  { completed: true, streak: true, today: true }
+                ].map((day, index) => (
+                  <div key={index} className={`
+                    w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold relative
+                    ${day.completed
+                      ? day.today
+                        ? 'bg-blue-500 text-white ring-2 ring-blue-300'
+                        : 'bg-green-500 text-white'
+                      : 'bg-gray-200 text-gray-400'
+                    }
+                  `}>
+                    {day.completed ? '✓' : index + 18}
+                    {day.streak && (
+                      <div className="absolute -top-1 -right-1 text-xs">🔥</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Daily Stats */}
+            <div className="space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium text-readable vietnamese-text">Hôm nay</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold text-green-600">3/3 bài</span>
+                  <span className="text-lg">✅</span>
                 </div>
               </div>
 
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm font-medium text-readable vietnamese-text">Viết</span>
-                  <span className="text-sm font-bold text-blue-600">45%</span>
-                </div>
-                <div className="w-full bg-gray-300 rounded-full h-4">
-                  <div className="bg-blue-600 h-4 rounded-full transition-all duration-500" style={{width: '45%'}}></div>
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium text-readable vietnamese-text">Tuần này</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold text-blue-600">21/21 bài</span>
+                  <span className="text-lg">🏆</span>
                 </div>
               </div>
 
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm font-medium text-readable vietnamese-text">Ngữ pháp</span>
-                  <span className="text-sm font-bold text-blue-600">30%</span>
-                </div>
-                <div className="w-full bg-gray-300 rounded-full h-4">
-                  <div className="bg-blue-600 h-4 rounded-full transition-all duration-500" style={{width: '30%'}}></div>
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium text-readable vietnamese-text">Chuỗi ngày liên tục</span>
+                <div className="flex items-center gap-1">
+                  <span className="text-2xl">🔥</span>
+                  <span className="text-sm font-bold text-orange-600">7 ngày</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-4">
-              <ul className="text-sm space-y-2 vietnamese-text">
-                <li className="text-readable-light">• Cần luyện thêm viết mạch lạc.</li>
-                <li className="text-readable-light">• Đọc hiểu đang tiến bộ rất tốt!</li>
-              </ul>
+            <div className="mt-4 p-3 bg-orange-50 rounded-lg border border-orange-200">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-lg">🎯</span>
+                <span className="text-sm font-bold text-orange-700 vietnamese-text">Mục tiêu hôm nay</span>
+              </div>
+              <p className="text-sm text-orange-600 vietnamese-text">Hoàn thành 3 bài học để duy trì chuỗi ngày!</p>
             </div>
           </div>
 
