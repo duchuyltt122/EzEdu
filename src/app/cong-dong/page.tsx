@@ -70,7 +70,7 @@ export default function CongDongPage() {
                 { name: 'Đức', score: 260, rank: 3, avatar: 'Đ', color: 'bg-orange-400' },
                 { name: 'Lan', score: 150, rank: 4, avatar: 'L', color: 'bg-blue-500' },
                 { name: 'Tú', score: 120, rank: 5, avatar: 'T', color: 'bg-green-500' }
-              ].map((user, index) => (
+              ].map((user) => (
                 <div key={user.name} className={`p-3 rounded-lg flex items-center justify-between ${
                   user.rank === 4 ? 'bg-blue-100 border-2 border-blue-500' : 'bg-white'
                 }`}>
