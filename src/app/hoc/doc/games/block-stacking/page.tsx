@@ -84,7 +84,10 @@ export default function BlockStackingGame() {
     <div className="min-h-screen bg-gradient-to-b from-blue-300 to-blue-400">
       {/* Header */}
       <header className="bg-blue-600 px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="text-white text-lg">← Quay lại</Link>
+        <div className="flex items-center space-x-2">
+          <Link href="/hoc/doc" className="text-white text-sm">← Quay lại</Link>
+          <Link href="/" className="text-white text-sm">🏠 Trang chủ</Link>
+        </div>
         <h1 className="text-white text-xl font-bold">Xếp gạch</h1>
         <div className="text-white text-sm">Level {currentLevel}/10</div>
       </header>

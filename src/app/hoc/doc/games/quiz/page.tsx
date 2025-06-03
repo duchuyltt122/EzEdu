@@ -153,7 +153,10 @@ export default function QuizGame() {
     <div className="min-h-screen bg-gradient-to-b from-yellow-300 to-yellow-400">
       {/* Header */}
       <header className="bg-yellow-600 px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="text-white text-lg">← Quay lại</Link>
+        <div className="flex items-center space-x-2">
+          <Link href="/hoc/doc" className="text-white text-sm">← Quay lại</Link>
+          <Link href="/" className="text-white text-sm">🏠 Trang chủ</Link>
+        </div>
         <h1 className="text-white text-xl font-bold">Câu đố</h1>
         <div className="text-white text-sm">
           {currentQuestion}/10 | Điểm: {score}
@@ -246,10 +249,10 @@ export default function QuizGame() {
                   Chơi lại
                 </button>
                 <Link
-                  href="/"
+                  href="/hoc/doc"
                   className="block w-full bg-gray-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-gray-600 transition-colors"
                 >
-                  Về trang chủ
+                  Về trang đọc
                 </Link>
               </div>
             </div>
