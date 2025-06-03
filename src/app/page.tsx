@@ -52,7 +52,7 @@ export default function Home() {
             {/* Weekly Calendar */}
             <div className="mb-4">
               <div className="grid grid-cols-7 gap-1 mb-2">
-                {['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((day, index) => (
+                {['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((day) => (
                   <div key={day} className="text-center text-xs font-medium text-readable-light vietnamese-text">
                     {day}
                   </div>
