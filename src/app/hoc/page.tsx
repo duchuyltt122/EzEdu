@@ -4,26 +4,26 @@ export default function HocPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-400 to-blue-600 p-4">
       <div className="max-w-md mx-auto">
-        <h1 className="text-2xl font-bold text-white text-center mb-6">Học</h1>
+        <h1 className="text-3xl font-bold text-white text-center mb-6 vietnamese-text">Học</h1>
         <div className="space-y-4">
-          <div className="bg-yellow-200 rounded-lg p-4">
-            <h2 className="text-lg font-semibold mb-4">Chọn kỹ năng học:</h2>
-            <div className="grid grid-cols-2 gap-3">
-              <Link href="/hoc/nghe" className="bg-blue-500 text-white p-3 rounded-lg text-center hover:bg-blue-600">
+          <div className="bg-yellow-200 mobile-card">
+            <h2 className="text-xl font-semibold mb-4 text-readable vietnamese-text">Chọn kỹ năng học:</h2>
+            <div className="grid grid-cols-2 gap-4">
+              <Link href="/hoc/nghe" className="mobile-btn bg-blue-500 text-white hover:bg-blue-600 text-center min-h-[60px] flex items-center justify-center vietnamese-text">
                 🎧 Nghe
               </Link>
-              <Link href="/hoc/noi" className="bg-green-500 text-white p-3 rounded-lg text-center hover:bg-green-600">
+              <Link href="/hoc/noi" className="mobile-btn bg-green-500 text-white hover:bg-green-600 text-center min-h-[60px] flex items-center justify-center vietnamese-text">
                 🗣️ Nói
               </Link>
-              <Link href="/hoc/doc" className="bg-orange-500 text-white p-3 rounded-lg text-center hover:bg-orange-600">
+              <Link href="/hoc/doc" className="mobile-btn bg-orange-500 text-white hover:bg-orange-600 text-center min-h-[60px] flex items-center justify-center vietnamese-text">
                 📖 Đọc
               </Link>
-              <Link href="/hoc/viet" className="bg-purple-500 text-white p-3 rounded-lg text-center hover:bg-purple-600">
+              <Link href="/hoc/viet" className="mobile-btn bg-purple-500 text-white hover:bg-purple-600 text-center min-h-[60px] flex items-center justify-center vietnamese-text">
                 ✏️ Viết
               </Link>
             </div>
-            <div className="mt-4 text-center">
-              <Link href="/" className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 mr-2">
+            <div className="mt-6 text-center">
+              <Link href="/" className="mobile-btn bg-blue-500 text-white hover:bg-blue-600 vietnamese-text">
                 🏠 Trang chủ
               </Link>
             </div>
