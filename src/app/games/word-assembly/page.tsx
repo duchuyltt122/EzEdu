@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
 interface Level {
@@ -53,7 +53,7 @@ export default function WordAssemblyGame() {
     setSelectedLetters(selectedLetters.filter((_, i) => i !== index));
   };
 
-  const checkAnswer = () => {
+  const checkAnswer = useCallback(() => {
     const answer = selectedLetters.join('');
     if (answer === level.word) {
       setIsCompleted(true);
@@ -63,13 +63,13 @@ export default function WordAssemblyGame() {
         }
       }, 2000);
     }
-  };
+  }, [selectedLetters, level.word, currentLevel]);
 
   useEffect(() => {
     if (selectedLetters.length === level.word.length) {
       checkAnswer();
     }
-  }, [selectedLetters]);
+  }, [selectedLetters, checkAnswer, level.word.length]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-300 to-green-400">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
 interface Level {
@@ -54,10 +54,10 @@ export default function BlockStackingGame() {
     setStackedBlocks(stackedBlocks.filter((_, i) => i !== index));
   };
 
-  const checkAnswer = () => {
+  const checkAnswer = useCallback(() => {
     const currentOrder = stackedBlocks.map(block => level.blocks.indexOf(block));
     const isCorrect = JSON.stringify(currentOrder) === JSON.stringify(level.correctOrder);
-    
+
     if (isCorrect) {
       setIsCompleted(true);
       setTimeout(() => {
@@ -66,13 +66,13 @@ export default function BlockStackingGame() {
         }
       }, 2000);
     }
-  };
+  }, [stackedBlocks, level.blocks, level.correctOrder, currentLevel]);
 
   useEffect(() => {
     if (stackedBlocks.length === level.blocks.length) {
       checkAnswer();
     }
-  }, [stackedBlocks]);
+  }, [stackedBlocks, checkAnswer, level.blocks.length]);
 
   const resetLevel = () => {
     setAvailableBlocks([...level.blocks].sort(() => Math.random() - 0.5));
@@ -161,7 +161,7 @@ export default function BlockStackingGame() {
           {isCompleted && (
             <div className="bg-green-500 text-white rounded-2xl p-6 mt-4 text-center">
               <h3 className="text-xl font-bold mb-2">🎉 Xuất sắc!</h3>
-              <p>Bạn đã xếp đúng từ "{level.word}"!</p>
+              <p>Bạn đã xếp đúng từ &ldquo;{level.word}&rdquo;!</p>
               {currentLevel < levels.length && (
                 <p className="mt-2">Chuyển sang level tiếp theo...</p>
               )}
