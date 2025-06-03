@@ -20,7 +20,12 @@ export const metadata: Metadata = {
   description: "Ứng dụng giáo dục tương tác giúp trẻ em học tiếng Việt qua các trò chơi vui nhộn và bài tập thú vị",
   keywords: "học tiếng việt, trẻ em, giáo dục, trò chơi, tương tác",
   authors: [{ name: "EzEdu Team" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({

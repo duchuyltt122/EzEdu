@@ -118,7 +118,7 @@ export default function Home() {
           </div>
 
           {/* Main Navigation */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4 mb-4">
             <Link href="/hoc" className="block">
               <div className="bg-blue-500 mobile-card text-center hover:bg-blue-600 transition-all duration-200 shadow-lg min-h-[100px] flex flex-col justify-center">
                 <div className="text-4xl mb-2">📚</div>
@@ -132,11 +132,20 @@ export default function Home() {
                 <p className="text-white font-bold text-lg vietnamese-text">Tiến độ</p>
               </div>
             </Link>
+          </div>
 
-            <Link href="/nhiem-vu" className="block">
+          <div className="grid grid-cols-2 gap-4">
+            <Link href="/phan-thuong" className="block">
               <div className="bg-orange-500 mobile-card text-center hover:bg-orange-600 transition-all duration-200 shadow-lg min-h-[100px] flex flex-col justify-center">
-                <div className="text-4xl mb-2">🎯</div>
-                <p className="text-white font-bold text-lg vietnamese-text">Nhiệm vụ</p>
+                <div className="text-4xl mb-2">🏆</div>
+                <p className="text-white font-bold text-lg vietnamese-text">Phần thưởng</p>
+              </div>
+            </Link>
+
+            <Link href="/cong-dong" className="block">
+              <div className="bg-purple-500 mobile-card text-center hover:bg-purple-600 transition-all duration-200 shadow-lg min-h-[100px] flex flex-col justify-center">
+                <div className="text-4xl mb-2">👥</div>
+                <p className="text-white font-bold text-lg vietnamese-text">Cộng đồng</p>
               </div>
             </Link>
           </div>
