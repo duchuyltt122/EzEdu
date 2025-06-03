@@ -1,93 +1,36 @@
-# EzEdu - Ứng dụng học tiếng Việt qua trò chơi cho trẻ em
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Mô tả
-EzEdu là một ứng dụng web giáo dục được thiết kế đặc biệt cho trẻ em để học tiếng Việt thông qua các trò chơi tương tác thú vị. Ứng dụng có giao diện thân thiện, màu sắc bắt mắt và tương thích với thiết bị di động.
+## Getting Started
 
-## Tính năng chính
+First, run the development server:
 
-### 🏠 Ghép chữ
-- Kéo thả các chữ cái để tạo thành từ
-- Học cách ghép âm và tạo từ
-- Giao diện trực quan với hình ảnh minh họa
-
-### 📚 Xếp gạch  
-- Xếp các khối chữ cái theo thứ tự đúng
-- Rèn luyện khả năng sắp xếp và logic
-- Hiệu ứng thị giác hấp dẫn
-
-### ❓ Câu đố
-- Trả lời các câu hỏi về tiếng Việt
-- Kiểm tra kiến thức và từ vựng
-- Hệ thống tính điểm động lực
-
-## Công nghệ sử dụng
-- **Backend**: Node.js với Express.js
-- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
-- **Template Engine**: EJS
-- **Responsive Design**: CSS Grid và Flexbox
-
-## Cài đặt và chạy
-
-### Yêu cầu hệ thống
-- Node.js (phiên bản 14 trở lên)
-- npm hoặc yarn
-
-### Hướng dẫn cài đặt
-
-1. **Clone hoặc tải dự án về máy**
-   ```bash
-   cd ezedu
-   ```
-
-2. **Cài đặt dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Chạy ứng dụng**
-   ```bash
-   npm start
-   ```
-
-4. **Mở trình duyệt và truy cập**
-   ```
-   http://localhost:3000
-   ```
-
-## Cấu trúc dự án
-
-```
-ezedu/
-├── app.js                 # File chính của server
-├── package.json           # Cấu hình npm và dependencies
-├── views/                 # Templates EJS
-│   ├── index.ejs         # Trang chủ
-│   └── game.ejs          # Trang game
-├── public/               # Static files
-│   ├── css/
-│   │   ├── style.css     # CSS chính
-│   │   └── game.css      # CSS cho games
-│   └── js/
-│       ├── main.js       # JavaScript chính
-│       └── games.js      # Logic games
-└── README.md             # Tài liệu hướng dẫn
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Tính năng responsive
-- Tương thích với điện thoại di động
-- Giao diện tự động điều chỉnh theo kích thước màn hình
-- Hỗ trợ touch events cho thiết bị cảm ứng
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Hướng phát triển
-- [ ] Thêm nhiều cấp độ cho mỗi game
-- [ ] Hệ thống lưu tiến độ học tập
-- [ ] Thêm âm thanh và hiệu ứng
-- [ ] Tích hợp cơ sở dữ liệu
-- [ ] Thêm nhiều loại game mới
-- [ ] Hệ thống đăng nhập cho phụ huynh
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Đóng góp
-Mọi đóng góp để cải thiện ứng dụng đều được hoan nghênh!
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Giấy phép
-MIT License
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
