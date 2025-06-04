@@ -25,7 +25,7 @@ export default function Home() {
               </div>
               <div>
                 <h2 className="text-lg font-bold text-readable vietnamese-text">Xin chào Lan!</h2>
-                <p className="text-sm text-readable-light vietnamese-text">Hôm nay con làm tốt rồi đó.</p>
+                <p className="text-sm text-readable-light vietnamese-text">Hôm nay cậu làm tốt rồi đó.</p>
                 <p className="text-sm text-readable-light vietnamese-text">Mình cùng luyện thêm phần ngữ pháp nhé?</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function Home() {
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-1">
                   📍
                 </div>
-                <span className="text-xs text-white vietnamese-text font-medium">Từ vựng</span>
+                <span className="text-xs vietnamese-text font-medium">Từ vựng</span>
               </div>
 
               <div className="flex-1 h-2 bg-gray-300 mx-2 rounded-full"></div>
