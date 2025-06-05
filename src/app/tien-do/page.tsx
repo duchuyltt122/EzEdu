@@ -107,9 +107,58 @@ export default function TienDoPage() {
           </div>
         </div>
 
+        {/* Skills Progress */}
+        <div className="bg-yellow-100 mobile-card shadow-lg mb-4">
+          <h2 className="text-lg font-bold text-readable vietnamese-text mb-4">📊 Tiến độ kỹ năng</h2>
+
+          <div className="space-y-4">
+            <div className="p-4 bg-blue-50 rounded-lg">
+              <div className="flex justify-between items-center mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">📖</span>
+                  <span className="text-lg font-semibold text-readable vietnamese-text">Đọc</span>
+                </div>
+                <span className="text-xl font-bold text-blue-600">75%</span>
+              </div>
+              <div className="w-full bg-gray-300 rounded-full h-4 mb-2">
+                <div className="bg-blue-600 h-4 rounded-full transition-all duration-500" style={{width: '75%'}}></div>
+              </div>
+              <p className="text-sm text-blue-700 vietnamese-text">Xuất sắc! Bạn đọc hiểu rất tốt.</p>
+            </div>
+
+            <div className="p-4 bg-green-50 rounded-lg">
+              <div className="flex justify-between items-center mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">✏️</span>
+                  <span className="text-lg font-semibold text-readable vietnamese-text">Viết</span>
+                </div>
+                <span className="text-xl font-bold text-green-600">60%</span>
+              </div>
+              <div className="w-full bg-gray-300 rounded-full h-4 mb-2">
+                <div className="bg-green-600 h-4 rounded-full transition-all duration-500" style={{width: '60%'}}></div>
+              </div>
+              <p className="text-sm text-green-700 vietnamese-text">Tốt! Tiếp tục luyện viết mỗi ngày.</p>
+            </div>
+
+            <div className="p-4 bg-purple-50 rounded-lg">
+              <div className="flex justify-between items-center mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">📝</span>
+                  <span className="text-lg font-semibold text-readable vietnamese-text">Ngữ pháp</span>
+                </div>
+                <span className="text-xl font-bold text-purple-600">45%</span>
+              </div>
+              <div className="w-full bg-gray-300 rounded-full h-4 mb-2">
+                <div className="bg-purple-600 h-4 rounded-full transition-all duration-500" style={{width: '45%'}}></div>
+              </div>
+              <p className="text-sm text-purple-700 vietnamese-text">Cần cố gắng thêm với ngữ pháp!</p>
+            </div>
+          </div>
+        </div>
+
         {/* Statistics */}
         <div className="bg-yellow-100 mobile-card shadow-lg mb-4">
-          <h2 className="text-lg font-bold text-readable vietnamese-text mb-4">Thống kê</h2>
+          <h2 className="text-lg font-bold text-readable vietnamese-text mb-4">📈 Thống kê tổng quan</h2>
 
           <div className="space-y-4">
             <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">

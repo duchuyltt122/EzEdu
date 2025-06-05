@@ -122,6 +122,56 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Skills Progress Section */}
+          <div className="bg-yellow-100 mobile-card shadow-lg">
+            <h3 className="text-lg font-bold text-readable vietnamese-text mb-4">📊 TIẾN ĐỘ KỸ NĂNG</h3>
+
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="text-sm font-medium text-readable vietnamese-text">📖 Đọc</span>
+                  <span className="text-sm font-bold text-blue-600">75%</span>
+                </div>
+                <div className="w-full bg-gray-300 rounded-full h-3">
+                  <div className="bg-blue-600 h-3 rounded-full transition-all duration-500" style={{width: '75%'}}></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="text-sm font-medium text-readable vietnamese-text">✏️ Viết</span>
+                  <span className="text-sm font-bold text-green-600">60%</span>
+                </div>
+                <div className="w-full bg-gray-300 rounded-full h-3">
+                  <div className="bg-green-600 h-3 rounded-full transition-all duration-500" style={{width: '60%'}}></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="text-sm font-medium text-readable vietnamese-text">📝 Ngữ pháp</span>
+                  <span className="text-sm font-bold text-purple-600">45%</span>
+                </div>
+                <div className="w-full bg-gray-300 rounded-full h-3">
+                  <div className="bg-purple-600 h-3 rounded-full transition-all duration-500" style={{width: '45%'}}></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <ul className="text-sm space-y-2 vietnamese-text">
+                <li className="text-readable-light flex items-center gap-2">
+                  <span className="text-green-500">✓</span>
+                  Đọc hiểu đang tiến bộ rất tốt!
+                </li>
+                <li className="text-readable-light flex items-center gap-2">
+                  <span className="text-orange-500">⚠️</span>
+                  Cần luyện thêm ngữ pháp cơ bản.
+                </li>
+              </ul>
+            </div>
+          </div>
+
           {/* Learning Path Section */}
           <div className="bg-yellow-100 mobile-card shadow-lg">
             <h3 className="text-lg font-bold text-readable vietnamese-text mb-3">LỘ TRÌNH HỌC</h3>
